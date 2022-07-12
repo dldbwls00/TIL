@@ -26,3 +26,56 @@ int main() {
 
 	return 0;
 }
+
+/*
+	n 3
+m 2
+arr 	0 0 0 0 0 0 0 0 0 
+check	0 0 0 0 0 0 0 0 0
+
+sol(0) //0 != 2
+i 1
+arr 	1 0 0 0 0 0 0 0 0 
+check	0 1 0 0 0 0 0 0 0
+	sol(1) //1 != 2
+	i 1 //continue
+	i 2
+	arr 	1 2 0 0 0 0 0 0 0 
+	check	0 1 1 0 0 0 0 0 0
+		sol(2) //2 == 2
+		//출력 1 2
+	arr 	1 2 0 0 0 0 0 0 0 
+	check	0 1 0 0 0 0 0 0 0
+	i 3
+	arr 	1 3 0 0 0 0 0 0 0 
+	check	0 1 0 1 0 0 0 0 0
+		sol(2) //2 == 2
+		//출력 1 3
+	arr 	1 3 0 0 0 0 0 0 0 
+	check	0 1 0 0 0 0 0 0 0
+
+i 2
+arr 	2 2 0 0 0 0 0 0 0 
+check	0 1 1 0 0 0 0 0 0
+	sol(1) //1 != 2
+	i 1 //continue
+	i 2 //continue
+	i 3
+	arr 	2 3 0 0 0 0 0 0 0 
+	check	0 1 1 1 0 0 0 0 0
+		sol(2) //2 == 2
+		//출력 2 3
+	arr 	2 3 0 0 0 0 0 0 0 
+	check	0 1 1 0 0 0 0 0 0
+
+i 3
+arr 	3 3 0 0 0 0 0 0 0 
+check	0 1 1 1 0 0 0 0 0
+	sol(1) //1 != 2
+	i 1 //continue
+	i 2 //continue
+	i 3 //continue
+
+~~~sol(0) 종료
+~~~main() 종료
+*/
