@@ -34,3 +34,12 @@ cout.tie(NULL);
   * ex) stack, queue, priority_queue 등
 
 * 컨테이너별로 유용한 함수 존재
+
+<br/>
+
+**알고리즘 algorithm** : 컨테이너의 원소들을 조작할 수 있는 함수들의 모임
+* 반복자 또는 포인터로 작업할 원소를 가리킴
+* [first, last)
+* ex) 검색, 정렬, 수정, 개수 세기 등
+* 아래에서 계속
+* https://en.cppreference.com/w/cpp/algorithm
