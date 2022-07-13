@@ -38,7 +38,7 @@ cout.tie(NULL);
 
 <br/>
 
-✨ **알고리즘 algorithm** : 컨테이너의 원소들을 조작할 수 있는 함수들의 모임
+### **알고리즘 algorithm** : 컨테이너의 원소들을 조작할 수 있는 함수들의 모임
 * 반복자 또는 포인터로 작업할 원소를 가리킴
 * [first, last)
 * ex) 검색, 정렬, 수정, 개수 세기 등
@@ -46,7 +46,7 @@ cout.tie(NULL);
 
 <br/>
 
-✨ **벡터 vector** : #include <vector>
+### **벡터 vector** : #include <vector>
 * 순차 컨테이너
 * vector<type> v;
 * 자동으로 메모리가 할당되는 배열(동적 배열) : 크기를 변수로 지정 가능
@@ -55,4 +55,10 @@ cout.tie(NULL);
 * **멤버 함수**
 <br/>
 * vector<type> v(n, m) : 크기가 n인 벡터를 모두 m으로 초기화
- 
+* v.assign(n, m) : 이미 선언된 벡터의 크기를 n으로 만들고 모두 m으로 초기화
+* v.size() : 벡터의 크기 반환
+* v.empty() : 비어있으면 true, 비어있지 않으면 false 반환
+* begin() / end() / rbegin() / rend() : 반복자
+ ||v.begin()|||v.end()|
+ ||[0]|[1]|[2]||
+ |v.rend()|||v.rbegin()||
