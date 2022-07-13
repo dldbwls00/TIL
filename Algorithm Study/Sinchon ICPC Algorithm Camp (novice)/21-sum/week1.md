@@ -141,16 +141,31 @@ int main(){
 * swap(a, b) : 벡터도 사용 가능
 * reverse(v.begin(), v.end())
 
- <br/> <br/>
+ <br/> <br/> <br/>
 
-## how to study
+# how to study
 1. c언어로 풀 수 있는 문제를 푼다
 2. c++로 작성한 다른 사람의 코드를 본다
 3. 처음 보는데 여러 사람들이 공통적으로 쓴 부분을 구글링
 -> 학습의 속도는 느리지만 불필요한 학습이 줄고 자주 사용하는 것 위주로 공부 가능
 	
  <br/> <br/>
-## 공부하면 좋은 것들: 필요에 따라서
+	
+# 공부하면 좋은 것들: 필요에 따라서
 * 반복자 interator
 * container: set, map, multiset, multimap, string
 * algorithm: next_permutation(여러 개의 원소를 일렬로 배열하는 모든 경우), unique(중복된 원소 제거), copy, fill, find
+	
+ <br/> <br/> <br/>
+# 과제
+출석문제
+15552 빠른 A+B : 브론즈2
+10804 카드 역배치 : 브론즈2
+1158 요세푸스 문제 : 실버5
+1547 공 : 브론즈3
+
+연습문제(기초 cpp 연습)
+1008 A/B : 브론즈4
+2993 세 부분 : 실버5
+9093 단어 뒤집기 : 브론즈1
+2346 풍선 터트리기 : 실버3	
