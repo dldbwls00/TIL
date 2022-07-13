@@ -10,20 +10,20 @@ int* ptr = &a;
 *ptr = 20;
 printf("%d", a);
 ```
->>> 20
+출력값은 20
 
 
 ## c++
 
 * using namespace std; //실무에서는 사용하지 않음
 * 시간초과 해결 (혼용불가)
-* ```ios::sync_with_stdio(false);
+* ``` ios::sync_with_stdio(false);
 cin.tie(NULL);
-cout.tie(NULL);```
+cout.tie(NULL); ```
 
 
 
-** 컨테이너 container ** : 임의 타입의 객체들을 보관하는 저장소
+**컨테이너 container** : 임의 타입의 객체들을 보관하는 저장소
 
 * 순차 컨테이너(sequence container) : 원소들이 순서대로 담김
   * ex) vector, list, string, deque 등
