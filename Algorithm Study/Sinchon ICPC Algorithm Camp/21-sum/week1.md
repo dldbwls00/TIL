@@ -46,7 +46,8 @@ cout.tie(NULL);
 
 <br/>
 
-### **벡터 vector** : #include <vector>
+### **벡터 vector**
+```#include <vector>```
 * 순차 컨테이너
 * vector<type> v;
 * 자동으로 메모리가 할당되는 배열(동적 배열) : 크기를 변수로 지정 가능
