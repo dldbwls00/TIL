@@ -13,6 +13,7 @@ printf("%d", a);
 출력값은 20
 
 <br/><br/>
+
 ## c++
 
 * using namespace std; //실무에서는 사용하지 않음
@@ -24,7 +25,7 @@ cout.tie(NULL);
 ```
 <br/>
 
-**컨테이너 container** : 임의 타입의 객체들을 보관하는 저장소
+✨ **컨테이너 container** : 임의 타입의 객체들을 보관하는 저장소
 
 * 순차 컨테이너(sequence container) : 원소들이 순서대로 담김
   * ex) vector, list, string, deque 등
@@ -37,7 +38,7 @@ cout.tie(NULL);
 
 <br/>
 
-**알고리즘 algorithm** : 컨테이너의 원소들을 조작할 수 있는 함수들의 모임
+✨ **알고리즘 algorithm** : 컨테이너의 원소들을 조작할 수 있는 함수들의 모임
 * 반복자 또는 포인터로 작업할 원소를 가리킴
 * [first, last)
 * ex) 검색, 정렬, 수정, 개수 세기 등
@@ -45,7 +46,7 @@ cout.tie(NULL);
 
 <br/>
 
-**벡터 vector** : #include <vector>
+✨ **벡터 vector** : #include <vector>
 * 순차 컨테이너
 * vector<type> v;
 * 자동으로 메모리가 할당되는 배열(동적 배열) : 크기를 변수로 지정 가능
