@@ -61,7 +61,6 @@ cout.tie(NULL);
 * v.size() : 벡터의 크기 반환
 * v.empty() : 비어있으면 true, 비어있지 않으면 false 반환
 * begin() / end() / rbegin() / rend() : 반복자
- <br/>
  
 ||v.begin()|||v.end()|
 |---|---|---|---|---|
