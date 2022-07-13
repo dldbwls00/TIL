@@ -70,7 +70,8 @@ cout.tie(NULL);
 * front() / back() : 원소
 * push_back(m) / pop_back(m) : 뒤에 추가 / 뒤에서 빼기
 * 벡터의 모든 원소를 훑는 코드 예시 (반복자 이용)
- ```#include <iostream>
+ ```
+#include <iostream>
 #include <vector>
 using namespace std;
 
@@ -93,4 +94,49 @@ int main(){
     return 0;
 }
 ```
- 넷 다 
+* 넷 다 같은 표현이지만 1이 가장 직관적이고 편리함
+* resize(n) / resize(n,m) : 원래보다 작아지면 뒤부터 삭제, 많지면 m으로 초기화
+* insert(iter, m) / insert(iter, k, m) : iter는 반복자, iter위치에 k개의 m을 삽입. 중간에 삽입하면 뒤의 원소를 한 칸씩 밀어야 하므로 시간이 오래 걸림
+* erase(iter), erase(start, end) : start부터 end까지 원소 삭제
+ 
+<br/>
+ 
+### pair
+```#include <utility>```
+* vector, algorithm 헤더에 이미 포함됨
+* 두 객체를 하나의 객체로 묶어 사용할 수 있게 해주는 클래스 (순서쌍, 좌표평면 위의 점 등)
+* pair<type1, type2> p;
+* first, second로 원소 접근 가능
+* 연산자 사용 가능 (ex. (2,3) < (2,4)) : first 먼저 비교
+* pair 이용 예시
+```
+                               #include <iostream>
+#include <utility>
+using namespace std;
+
+int main(){
+	pair<int, int> p1, p2, p3;
+    
+    p1.first=2;
+    p1.second=1;
+    
+    p2=make_pair(3,1);
+    
+    p3={0,1}; //since c++11
+    
+ 	if (p1<p2) cout << "<";
+    else if (p1==p2)	cout << "same";
+    else	cout << ">";
+    return 0;
+}
+```
+```pair<int, pair<int, int>> p; p={1, {2, 3}};```
+
+ <br/>
+ 
+### 알고리즘 algorithm
+```#include <algorithm>```
+* min(a, b) / max(a, b) //c++14 부터는 괄호 안에 여러 개의 원소를 넣을 수 있음
+* *min_element(arr, arr+5) / *max_element(v.begin(), v.end()) : 배열, 벡터에서, *이 붙었으므로 위치가 아니라 값 자체를 반환
+* swap(a, b) : 벡터도 사용 가능
+* reverse(v.begin(), v.end())
