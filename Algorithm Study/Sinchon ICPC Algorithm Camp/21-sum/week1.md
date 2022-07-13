@@ -140,3 +140,17 @@ int main(){
 * *min_element(arr, arr+5) / *max_element(v.begin(), v.end()) : 배열, 벡터에서, *이 붙었으므로 위치가 아니라 값 자체를 반환
 * swap(a, b) : 벡터도 사용 가능
 * reverse(v.begin(), v.end())
+
+ <br/> <br/>
+
+## how to study
+1. c언어로 풀 수 있는 문제를 푼다
+2. c++로 작성한 다른 사람의 코드를 본다
+3. 처음 보는데 여러 사람들이 공통적으로 쓴 부분을 구글링
+-> 학습의 속도는 느리지만 불필요한 학습이 줄고 자주 사용하는 것 위주로 공부 가능
+	
+ <br/> <br/>
+## 공부하면 좋은 것들: 필요에 따라서
+* 반복자 interator
+* container: set, map, multiset, multimap, string
+* algorithm: next_permutation(여러 개의 원소를 일렬로 배열하는 모든 경우), unique(중복된 원소 제거), copy, fill, find
