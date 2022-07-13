@@ -62,7 +62,7 @@ cout.tie(NULL);
 * v.empty() : 비어있으면 true, 비어있지 않으면 false 반환
 * begin() / end() / rbegin() / rend() : 반복자
  
-||v.begin()|||v.end()|
+* ||v.begin()|||v.end()|
 |---|---|---|---|---|
 ||[0]|[1]|[2]||
 |v.rend()|||v.rbegin()||
