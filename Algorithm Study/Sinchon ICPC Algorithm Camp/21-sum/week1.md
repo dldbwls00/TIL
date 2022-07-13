@@ -25,7 +25,7 @@ cout.tie(NULL);
 ```
 <br/>
 
-✨ **컨테이너 container** : 임의 타입의 객체들을 보관하는 저장소
+### **컨테이너 container** : 임의 타입의 객체들을 보관하는 저장소
 
 * 순차 컨테이너(sequence container) : 원소들이 순서대로 담김
   * ex) vector, list, string, deque 등
