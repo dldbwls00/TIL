@@ -17,7 +17,7 @@ printf("%d", a);
 
 * using namespace std; //실무에서는 사용하지 않음
 * 시간초과 해결 (혼용불가)
-* ```
+```
 ios::sync_with_stdio(false);
 cin.tie(NULL);
 cout.tie(NULL);
