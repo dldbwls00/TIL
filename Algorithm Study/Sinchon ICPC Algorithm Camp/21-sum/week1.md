@@ -4,9 +4,9 @@
 
 ✨ 포인터
 
-'''
+```
 int a = 3;
-int *ptr = &a;
+int* ptr = &a;
 *ptr = 20;
 printf("%d", a);
-'''
+```
