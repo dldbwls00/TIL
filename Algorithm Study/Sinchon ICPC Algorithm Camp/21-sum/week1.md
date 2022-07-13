@@ -41,5 +41,17 @@ cout.tie(NULL);
 * 반복자 또는 포인터로 작업할 원소를 가리킴
 * [first, last)
 * ex) 검색, 정렬, 수정, 개수 세기 등
-* 아래에서 계속
-* https://en.cppreference.com/w/cpp/algorithm
+* 참고 (https://en.cppreference.com/w/cpp/algorithm)
+
+<br/>
+
+**벡터 vector** : #include <vector>
+* 순차 컨테이너
+* vector<type> v;
+* 자동으로 메모리가 할당되는 배열(동적 배열) : 크기를 변수로 지정 가능
+* v.push_back() / v.pop_back()
+* c언어의 배열과 같이 random access가 가능함, 배열보다 조금 더 시간과 메모리를 사용
+* **멤버 함수**
+<br/>
+* vector<type> v(n, m) : 크기가 n인 벡터를 모두 m으로 초기화
+ 
