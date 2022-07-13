@@ -66,3 +66,29 @@ cout.tie(NULL);
 |---|---|---|---|---|
 ||[0]|[1]|[2]||
 |v.rend()|||v.rbegin()||
+
+* front() / back() : 원소
+* push_back(m) / pop_back(m) : 뒤에 추가 / 뒤에서 빼기
+* 벡터의 모든 원소를 훑는 코드 예시 (반복자 이용)
+ ```#include <iostream>
+#include <vector>
+using namespace std;
+
+int main(){
+    //1
+    vector<int> v={1,2,3}
+    for (int i=0; i<v.size(); i++)	cout << v[i];
+    
+    //2
+    vector<int>::iterator it;
+    for (it=v.begin(); it!=v.end(); it++)	cout << *it;
+    
+    //3
+   	for (int i=(int)v.size()-1; i>=0; i--)	cout << v[i];
+   
+    //4
+    vector<int>::reverse_iterator it2;
+    for (it2=v.begin(); it2!=v.rend(); it2++)	cout<< *it2;
+    
+    return 0;
+}```
