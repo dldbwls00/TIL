@@ -54,11 +54,11 @@ cout.tie(NULL);
 * c언어의 배열과 같이 random access가 가능함, 배열보다 조금 더 시간과 메모리를 사용
 * **멤버 함수**
 <br/>
-* vector<type> v(n, m) : 크기가 n인 벡터를 모두 m으로 초기화
-* v.assign(n, m) : 이미 선언된 벡터의 크기를 n으로 만들고 모두 m으로 초기화
-* v.size() : 벡터의 크기 반환
-* v.empty() : 비어있으면 true, 비어있지 않으면 false 반환
-* begin() / end() / rbegin() / rend() : 반복자
+ * vector<type> v(n, m) : 크기가 n인 벡터를 모두 m으로 초기화
+ * v.assign(n, m) : 이미 선언된 벡터의 크기를 n으로 만들고 모두 m으로 초기화
+ * v.size() : 벡터의 크기 반환
+ * v.empty() : 비어있으면 true, 비어있지 않으면 false 반환
+ * begin() / end() / rbegin() / rend() : 반복자
  ||v.begin()|||v.end()|
  ||[0]|[1]|[2]||
  |v.rend()|||v.rbegin()||
