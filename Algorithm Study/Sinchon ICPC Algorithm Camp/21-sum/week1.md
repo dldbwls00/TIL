@@ -91,4 +91,6 @@ int main(){
     for (it2=v.begin(); it2!=v.rend(); it2++)	cout<< *it2;
     
     return 0;
-}```
+}
+```
+ 넷 다 
