@@ -12,7 +12,7 @@ printf("%d", a);
 ```
 출력값은 20
 
-
+<br/><br/>
 ## c++
 
 * using namespace std; //실무에서는 사용하지 않음
@@ -22,8 +22,7 @@ ios::sync_with_stdio(false);
 cin.tie(NULL);
 cout.tie(NULL);
 ```
-
-
+<br/>
 
 **컨테이너 container** : 임의 타입의 객체들을 보관하는 저장소
 
