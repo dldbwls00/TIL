@@ -214,7 +214,7 @@ void stl_sort_array(int arr[], int n){
 
 10610 30 (실버5)
 
-<br/><br/>
+<br/>
 
 * advanced
 02437 저울 (골드3)
