@@ -130,7 +130,7 @@ void bubbleSort(int arr[], int n){
  * 그렇지 않으면 배열을 같은 크기로 나눈다. (홀수 개인 경우 한 개 차이나게 적당히)
  * **나눈 각각의 배열에서 병합 정렬을 수행한다. (재귀적)**
  * 정렬한 두 개 배열 각각의 첫 번째 원소부터 차례로 비교하여 전체 배열을 정렬한다.
-* 예시
+* 예시 (좌측절반인 9 4 3 8을 정렬하는 과정)
 
 |||||||||
 |---|---|---|---|---|---|---|---|
@@ -138,4 +138,46 @@ void bubbleSort(int arr[], int n){
 |**4**|**9**|3|8|5|2|1|7|
 |4|9|**3**|**8**|5|2|1|7|
 |**3**|**4**|**8**|**9**|5|2|1|7|
+
 이하생략
+```
+void mergeSort(int arr[], int l, int r){
+	if (l == r-1)	return; // 정렬해야 할 배열의 크기가 1이면 종료
+    int m = (l+r)/2;
+    mergeSort(arr, l, m); // 왼쪽 segment
+    mergeSort(arr, m, r); // 오른쪽 segment
+    //[l, m), [m,r]이 잘 정렬됨 
+    
+    merge(arr, l, m, r); // 각각의 segment가 잘 정렬되어 있을 때 기존 배열을 정렬 
+}
+
+void merge(int arr[], int l, int m, int r){
+	int idx1, idx2, idx3;
+    idx1 = idx3 = l;
+    idx2 = m;
+    
+    while (idx1 < m && idx2 < r){
+    	if (arr[idx1] < arr[idx2])	tmp[idx3++] = arr[idx1++]; //tmp는 원래 배열 arr와 같은 크기
+        else 				tmp[idx3++] = arr[idx2++];
+    }
+    
+    // 한 쪽 segment 요소를 다 쓴 경우
+    while (idx1 < m)	tmp[idx3++] = arr[idx1++];
+    while (idx2 < r)	tmp[idx3++] = arr[idx2++];
+    
+    for (int i=1; i<r; i++)	arr[i] = tmp[i];
+}
+```
+
+* arr[]
+
+|||||||||
+|---|---|---|---|---|---|---|---|
+|3|4|8|9|1|2|5|7|
+
+* tmp[]
+
+|||||||||
+|---|---|---|---|---|---|---|---|
+|1, 3 비교|3, 2 비교|3, 5 비교|4, 5 비교|8, 5 비교|8, 7 비교|8, 9 비교||
+|1|2|3|4|5|7|8|9|
