@@ -65,3 +65,10 @@ int sum(int n){
 |O(logN)|로그 시간(대수 시간, Logarithmic time)|
 |O(N)|선형 시간(Linear time)|
 |O(NlogN)|로그 선형 시간(Log-linear time)|
+|O(n^2)|제곱 시간(Quadratic time)|
+|O(n^3)|세제곱 시간(Cubic time)|
+|O(2^n)|지수 시간(Exponential time)|
+
+
+## 정렬 (sort)
+
