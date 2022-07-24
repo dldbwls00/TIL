@@ -59,8 +59,9 @@ int sum(int n){
 * 서로 다른 알고리즘의 시간 복잡도를 쉽게 비교할 수 있다.
 * 자주 사용하는 시간 복잡도 표기
 
-|O(1)|상수 시간(Constant time)|
+|Big-O||
 |---|---|
+|O(1)|상수 시간(Constant time)|
 |O(logN)|로그 시간(대수 시간, Logarithmic time)|
-|O(N)||선형 시간(Linear time)|
+|O(N)|선형 시간(Linear time)|
 |O(NlogN)|로그 선형 시간(Log-linear time)|
