@@ -38,13 +38,13 @@ int sun(int n){
   }
   return result;
   // (3i+1+2)+1 = 1.5n^2 + 4.5n + 2
- ```
- ```
- int sum(int n){
-  int result=0;
+```
+```
+int sum(int n){
+ int result=0;
     
-  for (int i=1; i<=n; i++)	result += i; //한 번 반복할 때 3번 연산
-  return result;
+ for (int i=1; i<=n; i++)	result += i; //한 번 반복할 때 3번 연산
+ return result;
 }
 // 3n+1
 ```
