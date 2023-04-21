@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML5 Canvas</title>
+        <link rel="icon" href="https://fav.farm/🔥" />
+    </head>
+    <body>
+        <canvas id="draw" width="800" height="800"></canvas>
+        <script>
+            const canvas = document.querySelector('#draw'); //canvas
+            //get a block of actual pixels, and draw on that (context whick is 2D)
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            ctx.strokeStyle='#BADA55'; //starting color
+            //end of the line: sqaured off or rounded around the corner?
+            ctx.lineJoin = 'round';
+            ctx.lineCap = 'round';
+            ctx.lineWidth = 100;
+            //ctx.globalCompositeOperation = 'multiply'; //blend each other
+
+            //flag: actually drawing or just moving the mouse withdout doing anything?
+            let isDrawing = false; //when we click this element: draw only when cursor is down
+            
+            let lastX = 0; //starting x and y, ending x and y of a line
+            let lastY = 0;
+
+            //mothereffinghsl.com
+            //hsl: programmaticfally select pieces of rainbow
+            let hue = 0;
+            let direction = true;
+
+            function draw(e){ //called whenever we move the mouse over the canvas
+                if (!isDrawing) return; //stop the function from running when they are not moused
+                console.log(e);
+                ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+                ctx.beginPath();
+                ctx.moveTo(lastX, lastY); //start from
+                ctx.lineTo(e.offsetX, e.offsetY); //go to
+                ctx.stroke();
+                [lastX, lastY] = [e.offsetX, e.offsetY];
+
+                //ctx.lineWidth = hue;
+                hue++;
+                if (hue >= 360) {
+                    hue = 0; //안해도됨
+                }
+                if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1){
+                    direction = !direction; //flip direction
+                }
+                if (direction){ //커졌다 작아지는 걸 연결되게
+                    ctx.lineWidth++;
+                } else {
+                    ctx.lineWidth--;
+                }
+            }
+
+            //as soon as the per...son clicks their mouse down to start it,
+            //before we do a mouse move
+            canvas.addEventListener('mousedown', (e) => {
+                isDrawing = true;
+                [lastX, lastY] = [e.offsetX, e.offsetY]; //update
+            });
+
+            canvas.addEventListener('mousemove', draw);
+            canvas.addEventListener('mouseup', () => isDrawing = false);
+            canvas.addEventListener('mouseout', () => isDrawing = false);
+
+
+        </script>
+
+        <style>
+            html, body {
+                margin: 0;
+            }
+        </style>
+    </body>
+</html>
