@@ -1,0 +1,2 @@
+week10 task2
+Water will move from the area of higher pressure to an area of lower pressure if a path is provided. This centrifugal pump works on this principle. Air is removed from the impeller so that the pressure is reduced to 0.046 MPa. Atmospheric pressure is 0.1 MPa, so the water moves from the area of higher pressure to the area of lower pressure. The water will come out through discharge port headed to the land. 

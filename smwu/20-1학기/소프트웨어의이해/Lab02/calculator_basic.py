@@ -1,0 +1,8 @@
+a=int(input("Enter number 1 : "))
+b=int(input("Enter nubmer 2 : "))
+print("[Today's multiplication]")
+print(a, "+", b, "=", a+b)
+print(a, "-", b, "=", a-b)
+print(a, "*", b, "=", a*b)
+print(a, "//", b, "=", a//b)
+print(a, "/", b, "=", a/b)

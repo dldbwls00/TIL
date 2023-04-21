@@ -1,0 +1,26 @@
+week9 discuss
+
+1. Since aluminiun is stronger that wood, why do we still use wood for building houses?
+
+A tree has a grain. Trees are really easy to break when forces are applied in this grain's direction, but they don't break easily if applied in reverse direction this grain. If we use this advantage to make wooden boards by attatching woods in a different direction of grains, they become a very strong material.
+
+Wood is also used because the wooden patterns are beautiful.
+
+It is eco-friendly because it produces less carbon dioxide than when using steel bars or aluminum in the construction process.
+-------------------------------------------------------------------------
+
+2. There is plenty of aluminiun in the Earth so why should we recycle it?
+
+Producing new aluminum requires a process to extract only pure aluminum by mining minerals and removing impurities, and that consumes a lot of fossil fuels, so it is directly related to environmental pollution.
+
+And it takes a lot of times(500 years) for an aluminum can to be buried under the ground and then decomposed. There is already a lot of aluminum on Earth, but if we don't recycle it, we will consume more than it will be decompsed.
+-------------------------------------------------------------------------
+
+3. How do you think they make pure aluminium stronger?
+
+They make alloys by combining aluminum with other metals such as iron, coppor. This creates stronger metals than aluminum.
+-------------------------------------------------------------------------
+
+4. Why can't we use very strong but brittle materials for building aircraft?
+
+Aircraft are under a lot of force, such as air resistance and air pressure. It would be a relief if it didn't break, but if the material gets more force than it could bear, it would be a very dangerous situation because of its brittleness. So a bit of ductility of the material that consists aircraft is important.
