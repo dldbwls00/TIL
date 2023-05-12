@@ -8,39 +8,88 @@
     <body>
         <p onClick="makeGreen()">×BREAK×DOWN×</p>
         <!--콘솔에서 우클릭 - break on - node removal : breakpoint-->
+        <!--콘솔에서 보이는 모양을 바꿀 수 있음-->
         <script>
             const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
 
             function makeGreen() {
-            const p = document.querySelector('p');
-            p.style.color = '#BADA55';
-            p.style.fontSize = '50px';
+                const p = document.querySelector('p');
+                p.style.color = '#BADA55';
+                p.style.fontSize = '50px';
             }
 
             // Regular
+            console.log('hello');
 
             // Interpolated
+            console.log('hello i am a %s string!', '🧠');
 
             // Styled
+            //%c를 쓰면 두 번째 인자로 css 스타일 적용 가능 
+            console.log('%c i am some great text', 'font-size:50px; background:red; text-shadow:10px 10px 0 blue');
 
             // warning!
+            console.warn('oh nooo');
 
             // Error :|
+            console.error('error!');
 
             // Info
-
+            console.info('crocodiles eat 3-4 people per year');
+           
             // Testing
+            //false면 에러, true면 아무 일도 일어나지 않음(if statement 없이)
+            const p = document.querySelector('p'); //grab the paragragh on the page
+            console.assert(p.classList.contains('ouch'), 'that is wrong!'); //ouch를 포함하지 않으면 assert
+            // console.assert(1===2, 'that is wrong!'); //fire only when sth is wrong
 
             // clearing
+            console.clear();
 
             // Viewing DOM Elements
+            console.log(p); //actual element itself
+            console.dir(p); //dropdown the class list
+
+            console.clear();
 
             // Grouping together
+            //take the "dogs" array, loop over each one
+            dogs.forEach(dog => {
+                console.group(`${dog.name}`);
+                // console.groupColapsed(`${dog.name}`); //collapsed default
+                console.log(`This is ${dog.name}`);
+                console.log(`${dog.name} is ${dog.age} years old`);
+                console.log(`${dog.name} is ${dog.age*7} dog years old`);
+                console.groupEnd(`${dog.name}`);
+            });
 
             // counting
+            console.count('Wes');
+            console.count('Wes');
+            console.count('Steve');
+            console.count('Wes');
+            console.count('Wes');
+            console.count('Steve');
+            console.count('Steve');
+            console.count('Wes');
+            console.count('Steve');
+            console.count('Steve');
+            console.count('Steve');
 
             // timing
-
+            // 작업 시간 측정
+            console.time('fetching data');
+            fetch('https://api.github.com/users/wesbos')
+                .then(data => data.json())
+                .then(data => {
+                    console.timeEnd('fetching data');
+                    console.log(data);
+                });
+            //now 이용해도되지만 이게 더 쉬움
+            
+            //array가 모두 같은 레이블을 가지고 있으므로 테이블로 예쁘게 만들 수 있음
+            console.table(dogs);
+            
         </script>
     </body>
 </html>
