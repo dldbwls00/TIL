@@ -98,7 +98,31 @@
 
         <script>
             const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
-            console.log(checkboxes);
+
+            //shift 눌러서 구간체크하기 위해 각각의 variable을 갖도록 해야함
+            let lastChecked;
+            function handleCheck(e){
+                //check if they had the shift key down
+                //and check that they are 'checking' it (unchecked에도 반응함)
+                let inBetween = false;
+                if (e.shiftKey && this.checked) {
+                    //go ahead and do what we please
+                    //loop over every single checkbox
+                    checkboxes.forEach(checkbox => {
+                        console.log(checkbox);
+                        if (checkbox === this || checkbox === lastChecked) { //아래에서 위로 선택해도 되도록
+                        inBetween = !inBetween; //true 대신 opposite of itself
+                        console.log("starting to check them inbetween!");
+                    }
+                    if (inBetween) { //사이의 것들을 모두 체크
+                        checkbox.checked = true;
+                    }
+                    });
+                }
+                lastChecked = this;
+            }
+            //click은 키보드 입력도 받아줌
+            checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
         </script>
     </body>
 </html>
