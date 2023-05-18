@@ -53,3 +53,5 @@ let mousedown = false; // flag for drag and drop on the video bar
 progress.addEventListener('mousemove', (e) => mousedown && scrub(e)); //&&기호를 썼으므로 mousedown이 true여야 scrub(e)가 실행됨
 progress.addEventListener('mousedown', () => mousedown = true);
 progress.addEventListener('mouseup', () => mousedown = false);
+
+//응용: 혼자 full screen button 만들어보기!
