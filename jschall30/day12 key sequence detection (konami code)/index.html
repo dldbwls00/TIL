@@ -1,0 +1,32 @@
+<!-- key sequence detection  -->
+<!-- when someone inputs a certain sequence of keys into your window or inputter, then sth needs to happen -->
+<!-- what this is used most for online is the Konami code (ex. buzzfeed) -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Key Detection</title>
+        <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+        <link rel="icon" href="https://fav.farm/🔥" />
+    </head>
+    <body>
+        <script>
+            const pressed = [];
+            const secretCode = 'wesbos';
+
+            window.addEventListener('keyup', (e) => { //키보드 입력을 배열에
+                console.log(e.key);
+                pressed.push(e.key);
+
+                //trim the array, maximum 크기 유지 (이 경우 6, wesbos가 6글자)
+                pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length); //from the back
+                
+                if (pressed.join('').includes(secretCode)) { //wesbos 입력한 경우
+                    console.log('ding ding!!');
+                    cornify_add(); //화면에 유니콘 무지개 띄워줌!!!
+                }
+                console.log(pressed);
+            });
+        </script>
+    </body>
+</html>
