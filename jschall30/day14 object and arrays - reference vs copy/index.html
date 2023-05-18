@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS Reference VS Copy</title>
+        <link rel="icon" href="https://fav.farm/🔥" />
+    </head>
+    <body>
+        <script>
+            // start with strings, numbers and booleans
+            let age = 100;
+            let age2 = age;
+            console.log(age, age2);
+            age = 200;
+            console.log(age, age2); //값 전달
+
+            let name = 'wes';
+            let name2 = name;
+            console.log(name, name2);
+            name = 'wesley';
+            console.log(name, name2); //string도 마찬가지
+            
+            // Let's say we have an array
+            const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+
+            // and we want to make a copy of it.
+            const team = players;
+
+            // You might think we can just do something like this:
+            team[3] = 'Lux'; 
+                //players까지 업데이트됨 -> 참조 전달
+                //team은 array가 아님, reference to the original array(players)
+
+            // however what happens when we update that array?
+
+            // now here is the problem!
+
+            // oh no - we have edited the original array too!
+
+            // Why? It's because that is an array reference, not an array copy. They both point to the same array!
+
+            // So, how do we fix this? We take a copy instead!
+            const team2 = players.slice(); 
+                //인자 전달하지 않으면 actual array의 copy -> 값 전달
+                //team2를 수정해도 players가 바뀌지 않음
+            
+
+            // one way
+
+            // or create a new array and concat the old one in
+            const team3 = [].concat(players);
+                //또 다른 방법 : 빈 배열에 붙여넣음
+
+            // or use the new ES6 Spread
+            const team4 = [...players];
+                //take the every item out of your iterable and put it into the containing array
+            team4[3] = 'heee haww!';
+            console.log(team4);
+
+            const team5 = Array.from(players); //players untouched, team5 updated
+
+            // now when we update it, the original one isn't changed
+
+            // The same thing goes for objects, let's say we have a person object
+
+            // with Objects
+            const person = {
+            name: 'Wes Bos',
+            age: 80
+            };
+
+            // and think we make a copy:
+            const captain = person;
+            captain.number = 99; //값 전달, person이 변경딤
+
+            // how do we take a copy instead?
+            const cap2 = Object.assign({}, person, { number: 99, age: 12 }); 
+                //빈 곳에 person을 override and fold in all of the properties and values from our object
+                //and then we use the third argument to fold in our own ones
+            console.log(cap2);
+
+            // We will hopefully soon see the object ...spread
+            const cap3 = {...person};
+
+            // Things to note - this is only 1 level deep - both for Arrays and Objects. 
+            // lodash has a cloneDeep method, but you should think twice before using it.
+            const wes = {
+                name: 'wes',
+                age: 100,
+                social: {
+                    twitter: '@wesbos',
+                    facebook: 'weskj'
+                }
+            }
+            console.clear();
+            console.log(wes);
+
+            const dev = Object.assign({}, wes); 
+            //name을 바꿔도 original(wes)은 바귀지 않음
+            //twitter는 바꾸면 wes도 같이 바뀜 <??
+            //Object.assign()은 1 level deep, deep clone을 해야함
+
+            const dev2 = JSON.parse(JSON.stringify(wes));
+            //이걸로 사용하면 바뀌지 않음!
+            //object를 string으로 바꿔주기 때문 -> full copy
+
+        </script>
+    </body>
+</html>
