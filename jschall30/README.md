@@ -6,3 +6,6 @@ javascript 30day challenge
 ✅ starter files :: https://github.com/wesbos/JavaScript30
 
 2023-03-29 ~ 
+
+### todo!
+- day11 full screen 구현 
