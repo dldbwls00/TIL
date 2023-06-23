@@ -7,6 +7,8 @@ javascript 30day challenge
 
 🏴 2023-03-29 ~ 
 
+---
+
 ### todo!
 - day11 full screen 구현 
 
