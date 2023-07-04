@@ -1,4 +1,3 @@
-//이유진 (2016133)
 //2023-07-02
 //Lab0630-5: 예외처리: 문자 빈도수 체크
 
@@ -12,7 +11,7 @@ public class ArrayExceptionTest {
 		System.out.print("문장 입력: ");
 		String s = scan.nextLine();
 
-		Integer[] count = new Integer[26]; // 빈도수를 담을 26크기의 배열
+		int[] count = new int[26]; // 빈도수를 담을 26크기의 배열
 		for (int i = 0; i < count.length; i++) // 0으로 초기화
 			count[i] = 0;
 		s = s.toUpperCase(); // 대문자 변환
