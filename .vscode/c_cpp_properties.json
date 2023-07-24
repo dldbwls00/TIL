@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/msys64/mingw64/include" //추가로 사용할 헤더파일 경로
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.18362.0",
+            // "compilerPath": "cl.exe",
+            "compilerPath" : "C:/msys64/mingw64/bin/g++.exe",//컴파일로 경로 g++로 변경
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            // "intelliSenseMode": "windows-msvc-x64"
+            "intelliSenseMode": "windows-gcc-x64" //인텔리센스 gcc로 변경
+        }
+    ],
+    "version": 4
+}
