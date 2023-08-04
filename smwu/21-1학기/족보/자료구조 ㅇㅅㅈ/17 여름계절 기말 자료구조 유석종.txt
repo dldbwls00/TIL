@@ -1,0 +1,29 @@
+1. 해시 함수가 주어지고, 총 identify, bucket수, slot수 제시
+ - 발생하는 충돌과 오버플로우 수
+ - 적재밀도, 총 identify 밀도 수
+ - 해시 함수 조건 3개
+
+2. sort 과정 서술
+ -selection sort
+ -recursive quick sort
+
+3. interpolation search 
+ -pos위치 식(빈칸)
+ -pos 위치 output
+
+4. kruskal's pseudocode 빈칸 채우기
+
+5. AVL tree 작성
+
+6. dijkstra'method d[] p[] 작성하기
+
+7. 깊이 우선 탐색(DFS) 경로 작성
+
+7. 4*4 행렬
+ - A-1,A0,A1,A2,A3 작성
+ - A+ 작성
+
+8. 
+ - 임계도 earliest, 최대, 차이 값 구하기
+ - 여유시간이 가장 긴 작업
+ - 시간에 영향을 미치는 임계작업 작성
