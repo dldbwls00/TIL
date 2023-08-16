@@ -2,6 +2,7 @@
   "powershell.integratedConsole.suppressStartupBanner": true,
   "files.associations": {
     "iostream": "cpp",
-    "functional": "cpp"
+    "functional": "cpp",
+    "random": "cpp"
   }
 }
