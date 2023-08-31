@@ -1,31 +1,45 @@
 <html>
+	<head>
+		<meta charset="utf-8" />
+		<title>웹게임</title>
+	</head>
 
-<head>
-    <meta charset="utf-8">
-    <title>웹게임</title>
-</head>
+	<body>
+		<div id="root"></div>
+		<!--개발용-->
+		<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 
-<body>
-    <div id="root"></div>
-    <!--개발용-->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+		<!--배포용-->
+		<!--<script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>-->
+		<!--<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>-->
 
-    <!--배포용-->
-    <!--<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>-->
-    <!--<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>-->
-    <script>
-        'use strict';
+		<script>
+			"use strict";
+			const e = React.createElement;
 
-        //클래스로 하는 방식
-        class LikeButton extends React.Component {
+			// 클래스로 하는 방식: ErrorBoundary를 제외하고는 거의 쓰지 않음
+			class LikeButton extends React.Component {
+				// 컴포넌트: 데이터+화면
+				constructor(props) {
+					super(props);
+					this.state = { liked: false }; // 데이터(state)
+				}
+				render() {
+					if (this.state.liked) {
+						return "You liked this.";
+					}
+					return e("button", { onClick: () => this.setState({ liked: true }) }, "Like"); //화면
+				}
+			}
 
-        }
-
-        //함수로 하는 방식
-        const LikeButton = () => { };
-        function LikeButton() { };
-    </script>
-</body>
-
+			// 함수로 하는 방식: 대부분 화살표함수로 사용
+			// const LikeButton = () => { };
+			// function LikeButton() { };
+		</script>
+		<script>
+			//LikeButton이라는 컴포넌트를 root 안에 그린다
+			ReactDOM.render(React.createElement(LikeButton), document.querySelector("#root"));
+		</script>
+	</body>
 </html>

@@ -1,0 +1,38 @@
+<html>
+	<head> </head>
+	<body>
+		<div id="root"></div>
+		<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+		
+        <!--babel 라이브러리 추가-->
+		<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+		
+        <!--<script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>-->
+		<!--<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>-->
+		
+        <script type="text/babel">
+			//babel 라이브러리 추가
+			"use strict";
+
+			class LikeButton extends React.Component {
+				constructor(props) {
+					super(props);
+					this.state = { liked: false };
+				}
+				render() {
+					if (this.state.liked) {
+						return "You liked this.";
+					}
+					return <button onClick={() => this.setState({ liked: true })}>Like</button>;
+					// addEventListener("click", { onClick: () => this.setState({ liked: true }) }, "Like");
+				}
+			}
+		</script>
+		<script type="text/babel">
+			//React.createElememt를 jsx로 바꿔준 것 (실무에서 사용x)
+			ReactDOM.render(<LikeButton />, document.querySelector("#root")); //React17버전 코드 (사용은 가능함)
+			// ReactDOM.createRoot(document.querySelector("#root")).render(<LikeButton />); //React18버전 코드
+		</script>
+	</body>
+</html>
