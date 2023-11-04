@@ -1,0 +1,16 @@
+﻿  task2.c
+C:\Users\user\Desktop\dataStructure2016133_task2\dataStructure2016133_task2\task2.c(57,6): warning C4101: 'num' :참조되지 않은 지역 변수입니다.
+C:\Users\user\Desktop\dataStructure2016133_task2\dataStructure2016133_task2\task2.c(106,16): warning C4101: 'm2' :참조되지 않은 지역 변수입니다.
+C:\Users\user\Desktop\dataStructure2016133_task2\dataStructure2016133_task2\task2.c(106,20): warning C4101: 'm3' :참조되지 않은 지역 변수입니다.
+C:\Users\user\Desktop\dataStructure2016133_task2\dataStructure2016133_task2\task2.c(106,48): warning C4101: 'm10' :참조되지 않은 지역 변수입니다.
+C:\Users\user\Desktop\dataStructure2016133_task2\dataStructure2016133_task2\task2.c(106,28): warning C4101: 'm5' :참조되지 않은 지역 변수입니다.
+C:\Users\user\Desktop\dataStructure2016133_task2\dataStructure2016133_task2\task2.c(106,36): warning C4101: 'm7' :참조되지 않은 지역 변수입니다.
+C:\Users\user\Desktop\dataStructure2016133_task2\dataStructure2016133_task2\task2.c(106,40): warning C4101: 'm8' :참조되지 않은 지역 변수입니다.
+C:\Users\user\Desktop\dataStructure2016133_task2\dataStructure2016133_task2\task2.c(106,32): warning C4101: 'm6' :참조되지 않은 지역 변수입니다.
+C:\Users\user\Desktop\dataStructure2016133_task2\dataStructure2016133_task2\task2.c(106,24): warning C4101: 'm4' :참조되지 않은 지역 변수입니다.
+C:\Users\user\Desktop\dataStructure2016133_task2\dataStructure2016133_task2\task2.c(106,44): warning C4101: 'm9' :참조되지 않은 지역 변수입니다.
+C:\Users\user\Desktop\dataStructure2016133_task2\dataStructure2016133_task2\task2.c(113,7): warning C4101: 'cardshape' :참조되지 않은 지역 변수입니다.
+C:\Users\user\Desktop\dataStructure2016133_task2\dataStructure2016133_task2\task2.c(133,18): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\dataStructure2016133_task2\dataStructure2016133_task2\task2.c(139,18): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\dataStructure2016133_task2\dataStructure2016133_task2\task2.c(131): warning C4716: 'pop_handcard': 값을 반환해야 합니다.
+  dataStructure2016133_task2.vcxproj -> C:\Users\user\Desktop\dataStructure2016133_task2\Debug\dataStructure2016133_task2.exe

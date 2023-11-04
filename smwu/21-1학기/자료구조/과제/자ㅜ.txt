@@ -1,0 +1,38 @@
+과제2
+   0         ■
+  1 2       ■ ■
+ 3 4 5     ■ ■ ■
+6 7 8 9   ■ ■ ■ ■
+
+   0
+  1 2
+ 3 4 5
+6 7 8 9
+
+ 
+   ■
+  ■ ■ 
+ ■ ■ ■
+■ ■ ■ ■
+
+♥ ♣ ◆ ♠
+// 다이아몬드 특정 폰트에서 출력 안 됨
+
+// card tree: doubly linked list (tree node is created by malloc())
+// hand card: linked stack (top node card is to be played
+ https://ujink.tistory.com/3
+
+1. 카드 제거
+  자신이 가지고 있는 카드와 숫자가 1차이가 나는 카드를 없앨 수 있다.
+  순환구조:  A=1, J=11, Q=12, K=13 >>> 나머지 이용?
+  카드를 지우면 내가 가지고 있는 hand card 맨 위로 온다. 기존에 맨 위에 있던 카드는 그 다음 자리로 밀림
+  hand card 수 ++
+
+2. 카드 제거 불가능
+  카드를 지울 수 없으면 버린다(new card -1 입력)
+  hand card의 다음 카드가 열림
+  hand card 수 --
+
+3. hand card 표시
+  맨 위의 보이는 카드 1개, ■는 최대 10개로 최대 11개만 표시
+  11개보다 작아지는 것도 나타내야함
