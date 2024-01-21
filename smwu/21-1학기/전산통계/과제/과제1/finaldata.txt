@@ -1,7 +1,0 @@
-status	id	major	class	course
-S	20001	Stat	01	전산통계
-P				전산통계
-S	20005	Math	02	전산통계
-S	19004	Eco	01	전산통계
-S	20009	Stat	02	전산통계
-S	19006	Stat	02	전산통계
