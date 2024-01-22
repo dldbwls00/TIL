@@ -1,8 +1,9 @@
-// boj 16507 어두운 건 무서워
+// boj 10427 빚
 // implementation
 #include <iostream>
 using namespace std;
 
+int T;
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
