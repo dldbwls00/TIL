@@ -1,5 +1,5 @@
 // boj 11660 구간 합 구하기 5
-// implementation
+// prefix sum
 #include <iostream>
 using namespace std;
 

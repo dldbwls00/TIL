@@ -1,5 +1,5 @@
 // boj 2167 2차원 배열의 합
-// implementation
+// prefix sum
 
 // const input = require("fs").readFileSync("./example.txt").toString().split("\n");
 const input = require("fs").readFileSync("/dev/stdin").toString().split("\n");

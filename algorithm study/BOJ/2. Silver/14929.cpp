@@ -1,5 +1,5 @@
 // boj 14929 귀찮아 (SIB)
-// implementation
+// prefix sum
 #include <iostream>
 using namespace std;
 

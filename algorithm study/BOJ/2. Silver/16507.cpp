@@ -1,5 +1,5 @@
 // boj 16507 어두운 건 무서워
-// implementation
+// prefix sum
 #include <iostream>
 using namespace std;
 

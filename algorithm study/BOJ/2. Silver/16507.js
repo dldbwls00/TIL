@@ -1,5 +1,5 @@
 // boj 16507 어두운 건 무서워
-// implementation
+// prefix sum
 
 const input = require("fs").readFileSync("./example.txt").toString().split("\n");
 // const input = require("fs").readFileSync("/dev/stdin").toString().split("\n");

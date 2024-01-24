@@ -1,6 +1,6 @@
 // 참고 https://gundol97.tistory.com/89
 // boj 10427 빚
-// implementation
+// prefix sum
 #include <algorithm>
 #include <iostream>
 using namespace std;

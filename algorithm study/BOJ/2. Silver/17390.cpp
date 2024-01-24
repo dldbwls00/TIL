@@ -1,5 +1,5 @@
 // boj 17390 이건 꼭 풀어야 해!
-// implementation
+// prefix sum
 #include <algorithm>
 #include <iostream>
 using namespace std;

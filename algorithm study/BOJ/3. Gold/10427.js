@@ -1,6 +1,6 @@
 // 참고 https://gundol97.tistory.com/89
 // boj 10427 빚
-// implementation
+// prefix sum
 
 const input = require("fs").readFileSync("./example.txt").toString().split("\n");
 // const input = require("fs").readFileSync("/dev/stdin").toString().split("\n");

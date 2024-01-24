@@ -1,6 +1,6 @@
 // 시간초과 미해결
 // boj 11660 구간 합 구하기 5
-// implementation
+// prefix sum
 
 const input = require("fs").readFileSync("./example.txt").toString().split("\n");
 // const input = require("fs").readFileSync("/dev/stdin").toString().split("\n");

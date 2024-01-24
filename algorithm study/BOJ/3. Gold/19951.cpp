@@ -1,6 +1,6 @@
 // https://kau-algorithm.tistory.com/608 이걸 어떻게 생각해냄...
 // boj 19951 태상이의 훈련소 생활
-// implementation
+// prefix sum
 #include <iostream>
 using namespace std;
 

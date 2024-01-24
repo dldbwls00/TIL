@@ -1,5 +1,5 @@
 // boj 14929 귀찮아 (SIB)
-// implementation
+// prefix sum
 
 const input = require("fs").readFileSync("./example.txt").toString().split("\n");
 // const input = require("fs").readFileSync("/dev/stdin").toString().split("\n");
