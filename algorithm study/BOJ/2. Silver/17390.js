@@ -11,11 +11,19 @@ let arr = input[1].split(" ").map(Number);
 arr.push(0);
 arr = arr.sort(); //오름차순 정렬
 
+// console.log(arr);
 let temp = []; //누적합
 temp[0] = 0;
 temp[1] = arr[1];
 for (let i = 1; i <= n; i++) temp[i] = arr[i] + temp[i - 1];
 
+// ans = [];
+// for (let i = 0; i < q; i++) {
+//   const [a, b] = input[i + 2].split(" ").map(Number);
+//   if (a === b) ans[i] = arr[a];
+//   else ans[i] = temp[b] - temp[a - 1];
+// }
+// for (let i = 0; i < q; i++) console.log(ans[i]);
 for (let i = 0; i < q; i++) {
   const [a, b] = input[i + 2].split(" ").map(Number);
   if (a === b) console.log(arr[a]);
