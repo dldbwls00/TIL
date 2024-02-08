@@ -12,23 +12,20 @@ void hanoi(int n, int start, int via, int end) {
     hanoi(n - 1, start, end, via);
     cout << start << " " << end << "\n";
     hanoi(n - 1, via, start, end);
-    return;
 }
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
 
-    int n;
+    int n;  // 1 ≤ N ≤ 100
     cin >> n;
+    string total = to_string(pow(2, n));
+    int idx = total.find('.');
+    total = total.substr(0, idx);
+    total[total.length() - 1] -= 1;
+    cout << total << "\n";
+    if (n <= 20) hanoi(n, 1, 2, 3);
 
-    int num = pow(2, n) - 1;
-    if (n > 20) {
-        cout << num;
-        return 0;
-    } else {
-        cout << num << "\n";
-        hanoi(n, 1, 2, 3);
-    }
     return 0;
 }
