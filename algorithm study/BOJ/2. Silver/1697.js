@@ -4,33 +4,47 @@ const input = require("fs").readFileSync("./example.txt").toString().split("\n")
 // const input = require("fs").readFileSync("/dev/stdin").toString().split("\n");
 
 const [n, k] = input[0].split(" ").map(Number);
+
+// let map = Array.from(Array(100001), () => []);
+// map[0].push(1);
+// for (let i = 1; i < map.length; i++) {
+//   let temp = [];
+//   if (i - 1 <= 100000) temp.push(i - 1);
+//   if (i + 1 <= 100000) temp.push(i + 1);
+//   if (i * 2 <= 100000) temp.push(i * 2);
+//   map[i].push(...new Set(temp)); //중복제거
+// }
+// console.log(map);
+
 let visited = new Array(100001).fill(0);
-let cnt = 0;
+let cnt = new Array(100001).fill(0);
 
-let map = Array.from(Array(Math.max(n, k) * 2), () => []);
-map[0].push(1);
-for (let i = 1; i < map.length; i++) {
-  let temp = [];
-  temp.push(i - 1, i + 1, i * 2);
-  map[i].push(...new Set(temp)); //중복제거
-}
-console.log(map);
-
-let queue = [];
 function bfs(v) {
+  let queue = [];
+  queue.push(v);
+  visited[v] = 1;
+  //   console.log(queue);
   while (queue.length > 0) {
     let temp = queue.shift();
-    console.log(temp);
-
-    // for (let i = 0; i < map[temp].length; i++) {
-    //   if (visited[map[temp][i]] == 0) {
-    //     queue.push(map[temp][i]);
-    //     visited[map[temp][i]] = 1;
-    //     cnt++;
-    //   }
-    // //   if (visited[map[temp[i]]] === k) return;
-    // }
+    if (temp === k) break;
+    if (visited[temp - 1] === 0 && temp - 1 >= 0 && temp - 1 <= 100000) {
+      queue.push(temp - 1);
+      visited[temp - 1] = 1;
+      cnt[temp - 1] = cnt[temp] + 1;
+    }
+    if (visited[temp + 1] === 0 && temp + 1 >= 0 && temp + 1 <= 100000) {
+      queue.push(temp + 1);
+      visited[temp + 1] = 1;
+      cnt[temp + 1] = cnt[temp] + 1;
+    }
+    if (visited[temp * 2] === 0 && temp * 2 >= 0 && temp * 2 <= 100000) {
+      queue.push(temp * 2);
+      visited[temp * 2] = 1;
+      cnt[temp * 2] = cnt[temp] + 1;
+    }
+    // console.log(queue);
   }
 }
 bfs(n);
 // console.log(cnt);
+console.log(cnt[k]);
