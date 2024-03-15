@@ -7,7 +7,7 @@ const input = require("fs").readFileSync("./example.txt").toString().split("\n")
 const n = parseInt(input[0]);
 const original = input[1].split("");
 const want = input[2].split("");
-original.pop(); //개행문자 삭제
+// original.pop(); //개행문자 삭제
 let now;
 function pushswitch(idx) {
   for (let i = idx - 1; i <= idx + 1; i++) {
@@ -18,19 +18,21 @@ function pushswitch(idx) {
 }
 
 // 첫 번째 전구 스위치를 누르는 경우와 누르지 않는 경우로 나눠 그리디 진행
+// i-1번째와 비교하는데 첫 번째 전구는 비교할 대상이 없음
 function bulb(stat) {
   let cnt = 0;
   now = [...original]; //깊은 복사
+  // now = original.slice(); //깊은 복사
 
   //첫 번째 전구 스위치를 누르는 경우
   if (stat === 1) {
-    pushswitch(0, now);
+    pushswitch(0);
     cnt++;
   }
 
   for (let i = 1; i < n; i++) {
     if (now[i - 1] !== want[i - 1]) {
-      pushswitch(i, now);
+      pushswitch(i);
       cnt++;
     }
   }

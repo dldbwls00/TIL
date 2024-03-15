@@ -41,9 +41,6 @@ for (let i = 0; i < t; i++) {
   }
   idx += n;
   pick(arr);
-  //   console.log(n);
-  //   console.log(arr);
-
   arr = [];
 }
 console.log(result);
