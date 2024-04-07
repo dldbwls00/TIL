@@ -1,10 +1,8 @@
 // 미해결
 // boj 4792 레드 블루 스패닝 트리
 // mst - kruskal, prim / union find
-
 const input = require("fs").readFileSync("./example.txt").toString().trimEnd().split("\n");
 // const input = require("fs").readFileSync("/dev/stdin").toString().trimEnd() .split("\n");
-
 let parent = new Array(200001);
 //사이클이 생기지 않도록 하기 위해 union find 이용
 function findparent(x) {

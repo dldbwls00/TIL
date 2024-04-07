@@ -1,7 +1,6 @@
 // 미해결
 // boj 1626 두 번째로 작은 스패닝 트리
 // mst - kruskal, prim / union find
-
 const input = require("fs").readFileSync("./example.txt").toString().trimEnd().split("\n");
 // const input = require("fs").readFileSync("/dev/stdin").toString().trimEnd() .split("\n");
 
